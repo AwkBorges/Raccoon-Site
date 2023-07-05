@@ -21,13 +21,31 @@ export const RowContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1350px) {
+      width: 99%
+    }
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
+
 `
 
-export const WrapContainer = styled.div`
+export const GridContainer = styled.div`
 
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 
+  @media (max-width: 1350px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+  
 `
 
 export const Title = styled.h2`
@@ -40,15 +58,40 @@ export const Title = styled.h2`
 
 export const AboutCard = styled.div`
 
-  flex: 0 0 29%;
-  padding: 40px 40px 40px 40px;
-  box-sizing: border-box;
+  width: 300px;
+  padding: 50px;
+  margin: 15px;
   background: #2D2D2D;
-  margin: 15px 20px 15px 20px;
   border-radius: 20px;
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+`
+
+export const NumberCard = styled.div`
+
+  background: #2D2D2D;
+  width: 350px;
+  height: 150px;
+  margin: 20px;
+  padding: 30px 20px 10px 20px;
+  border-radius: 20px;
+  align-items: center;
+  text-align: center;
+  
+`
+export const Number = styled.p`
+
+
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  :hover{
+    color: #8B00FF;
+  }
+
 
 `
 
